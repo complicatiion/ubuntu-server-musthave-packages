@@ -5,10 +5,8 @@ Interactive Ubuntu Server bootstrap script for installing common admin/monitorin
 
 ## Usage
 
-# 1) Download Script
-curl -fsSL \
-  "https://raw.githubusercontent.com/complicatiion/ubuntu-server-musthave-packages \
-  -o /tmp/ubuntu-server-musthave-packages
+# 1) Download Script 
+curl -fsSL "https://raw.githubusercontent.com/complicatiion/ubuntu-server-musthave-packages/main/ubuntu-server-musthave-packages.sh" -o /tmp/ubuntu-server-musthave-packages.sh
 
 # 2) Install (root-owned)
 sudo install -m 0755 /tmp/ubuntu-server-musthave-packages /usr/local/sbin/ubuntu-server-musthave-packages
