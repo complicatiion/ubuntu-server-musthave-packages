@@ -70,5 +70,3 @@ If you enable UFW or need to adjust network policies:
 * iperf3 server: `5201/tcp`
 * NTP: `123/udp`
 
-```
-```
