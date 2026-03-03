@@ -3,6 +3,38 @@
 
 Interactive Ubuntu Server bootstrap script for installing common admin/monitoring/network tools on Ubuntu Server 24.04+ (works on newer LTS as well).
 
+## Usage
+
+# 1) Download Script
+curl -fsSL \
+  "https://raw.githubusercontent.com/complicatiion/ubuntu-server-musthave-packages \
+  -o /tmp/ubuntu-server-musthave-packages
+
+# 2) Install (root-owned)
+sudo install -m 0755 /tmp/ubuntu-server-musthave-packages /usr/local/sbin/ubuntu-server-musthave-packages
+
+# 3) Start
+/usr/local/sbin/ubuntu-server-musthave-packages
+
+### bash quote
+```
+chmod +x ubuntu-server-musthave-packages
+./ubuntu-server-musthave-packages
+```
+
+## After install (ports to consider)
+
+If you enable UFW or need to adjust network policies:
+
+* SSH: `22/tcp`
+* Cockpit: `9090/tcp`
+* Webmin: `10000/tcp`
+* XRDP: `3389/tcp`
+* mosh: `60000-61000/udp`
+* iperf3 server: `5201/tcp`
+* NTP: `123/udp`
+
+
 ## What it does
 
 - Shows a structured overview of available components (with short descriptions).
@@ -50,23 +82,4 @@ Interactive Ubuntu Server bootstrap script for installing common admin/monitorin
 - **Logwatch**: daily emails require an MTA (mail setup is not included).
 - **Webmin**: installs through the official Webmin repo script (downloads a script from GitHub). Only install if that is acceptable in your environment.
 - **UFW**: if you enable it, always allow SSH first (the script asks).
-
-## Usage
-
-```bash
-chmod +x ubuntu-server-musthave-packages
-./ubuntu-server-musthave-packages
-
-
-## After install (ports to consider)
-
-If you enable UFW or need to adjust network policies:
-
-* SSH: `22/tcp`
-* Cockpit: `9090/tcp`
-* Webmin: `10000/tcp`
-* XRDP: `3389/tcp`
-* mosh: `60000-61000/udp`
-* iperf3 server: `5201/tcp`
-* NTP: `123/udp`
 
