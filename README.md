@@ -1,5 +1,5 @@
 
-# ubuntu-server-musthave-packages
+# ubuntu-server-musthave-packages installation script
 
 Interactive Ubuntu Server bootstrap script for installing common admin/monitoring/network tools on Ubuntu Server 24.04+ (works on newer LTS as well).
 
